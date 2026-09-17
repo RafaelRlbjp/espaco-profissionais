@@ -385,7 +385,7 @@ select {
 /* IMAGEM DO HERO */
 
 .hero-imagem {
-  min-height: 540px;
+  min-height: 640px;
 
   border-radius: 40px 10px 40px 10px;
 
@@ -399,6 +399,26 @@ select {
       rgba(113, 140, 122, 0.9),
       rgba(232, 221, 208, 0.85)
     );
+
+    .hero-imagem {
+  width: 100%;
+  max-width: 650px;
+}
+
+.imagem-placeholder {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.imagem-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 }
 
 
