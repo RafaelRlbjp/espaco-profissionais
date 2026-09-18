@@ -176,7 +176,7 @@
 
           <div class="imagem-placeholder">
 
-              <img src="img/espaço-essentia.png" alt="Fachada do Espaço Essentia">
+              <img src="img/espaco-essentia.png" alt="Fachada do Espaço Essentia">
 
           </div>
 
@@ -420,7 +420,7 @@
         <div class="area-imagem">
 
           <div class="imagem-placeholder">
-            <img src="img/nutriçao.png" alt="Profissional Nutricionista-1">
+            <img src="img/nutricao.png" alt="Profissional Nutricionista-1">
           </div>
 
         </div>
@@ -624,113 +624,266 @@
 
 
     <!-- =========================
-         AGENDAMENTO
-    ========================== -->
+     AGENDAMENTO
+========================== -->
 
-    <section
-      class="section agendamento"
-      id="agendamento"
-    >
+<section class="section agendamento" id="agendamento">
 
-      <div class="container">
+  <div class="container">
 
+    <div class="section-heading section-heading-claro">
+      <span class="tag">Agende seu atendimento</span>
 
-        <div class="section-heading section-heading-claro">
+      <h2>Escolha a profissional e solicite seu horário</h2>
 
-          <span class="tag">
-            Agende seu atendimento
-          </span>
+      <p>
+        Selecione a modalidade, data e horário desejados.
+        O atendimento será enviado diretamente para a profissional.
+      </p>
+    </div>
 
+    <div class="agendamento-grid">
 
-          <h2>
-            Escolha a profissional
-            com quem deseja falar
-          </h2>
+      <!-- =========================
+           PSICOLOGIA
+      ========================== -->
 
+      <article class="agendamento-card">
 
-          <p>
-            O atendimento é realizado diretamente
-            pelo WhatsApp de cada profissional.
-          </p>
+        <span class="agendamento-area">Psicologia</span>
 
-        </div>
+        <h3>Nome da Psicóloga</h3>
 
+        <p class="agenda-info">
+          Terças e quintas<br>
+          09h • 11h • 14h • 16h • 18h
+        </p>
 
+        <form
+          class="form-agendamento"
+          id="form-psicologia"
+          data-profissional="Psicologia"
+        >
 
-        <div class="agendamento-grid">
+          <div class="campo-form">
+            <label for="modalidade-psicologia">
+              Modalidade
+            </label>
 
-
-          <!-- PSICOLOGIA -->
-
-          <article class="agendamento-card">
-
-            <span class="agendamento-area">
-              Psicologia
-            </span>
-
-
-            <h3>
-              Nome da Psicóloga
-            </h3>
-
-
-            <p>
-              Fale diretamente com a psicóloga
-              para informações sobre horários
-              e atendimento.
-            </p>
-
-
-            <a
-              href="https://wa.me/5583999999991?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Espa%C3%A7o%20Essentia%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20agendar%20uma%20consulta%20de%20Psicologia."
-              class="btn btn-whatsapp btn-full"
-              target="_blank"
-              rel="noopener noreferrer"
+            <select
+              id="modalidade-psicologia"
+              name="modalidade"
+              required
             >
-              WhatsApp da Psicóloga
-            </a>
+              <option value="">Selecione</option>
+              <option value="Presencial">Presencial</option>
+              <option value="Online">Online</option>
+            </select>
+          </div>
 
-          </article>
+          <div class="campo-form">
+            <label for="nome-psicologia">
+              Nome completo
+            </label>
 
-
-
-          <!-- NUTRIÇÃO -->
-
-          <article class="agendamento-card">
-
-            <span class="agendamento-area">
-              Nutrição
-            </span>
-
-
-            <h3>
-              Nome da Nutricionista
-            </h3>
-
-
-            <p>
-              Fale diretamente com a nutricionista
-              para informações sobre horários
-              e atendimento.
-            </p>
-
-
-            <a
-              href="https://wa.me/5583999999992?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Espa%C3%A7o%20Essentia%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20agendar%20uma%20consulta%20de%20Nutri%C3%A7%C3%A3o."
-              class="btn btn-whatsapp btn-full"
-              target="_blank"
-              rel="noopener noreferrer"
+            <input
+              type="text"
+              id="nome-psicologia"
+              name="nome"
+              autocomplete="name"
+              required
             >
-              WhatsApp da Nutricionista
-            </a>
+          </div>
 
-          </article>
+          <div class="campo-form">
+            <label for="idade-psicologia">
+              Idade
+            </label>
 
-        </div>
+            <input
+              type="number"
+              id="idade-psicologia"
+              name="idade"
+              min="1"
+              max="120"
+              required
+            >
+          </div>
 
-      </div>
+          <div class="campo-form">
+            <label for="data-psicologia">
+              Data desejada
+            </label>
 
-    </section>
+            <input
+              type="date"
+              id="data-psicologia"
+              name="data"
+              required
+            >
+
+            <small>
+              Disponível somente às terças e quintas.
+            </small>
+          </div>
+
+          <div class="campo-form">
+            <label for="horario-psicologia">
+              Horário disponível
+            </label>
+
+            <select
+              id="horario-psicologia"
+              name="horario"
+              required
+              disabled
+            >
+              <option value="">
+                Primeiro escolha uma data
+              </option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-whatsapp btn-full"
+          >
+            Solicitar agendamento
+          </button>
+
+          <div
+            class="mensagem-agendamento"
+            id="mensagem-psicologia"
+            aria-live="polite"
+          ></div>
+
+        </form>
+
+      </article>
+
+
+      <!-- =========================
+           NUTRIÇÃO
+      ========================== -->
+
+      <article class="agendamento-card">
+
+        <span class="agendamento-area">Nutrição</span>
+
+        <h3>Nome da Nutricionista</h3>
+
+        <p class="agenda-info">
+          Segundas, quartas e sextas<br>
+          10h • 14h • 16h
+        </p>
+
+        <form
+          class="form-agendamento"
+          id="form-nutricao"
+          data-profissional="Nutrição"
+        >
+
+          <div class="campo-form">
+            <label for="modalidade-nutricao">
+              Modalidade
+            </label>
+
+            <select
+              id="modalidade-nutricao"
+              name="modalidade"
+              required
+            >
+              <option value="">Selecione</option>
+              <option value="Presencial">Presencial</option>
+              <option value="Online">Online</option>
+            </select>
+          </div>
+
+          <div class="campo-form">
+            <label for="nome-nutricao">
+              Nome completo
+            </label>
+
+            <input
+              type="text"
+              id="nome-nutricao"
+              name="nome"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="campo-form">
+            <label for="idade-nutricao">
+              Idade
+            </label>
+
+            <input
+              type="number"
+              id="idade-nutricao"
+              name="idade"
+              min="1"
+              max="120"
+              required
+            >
+          </div>
+
+          <div class="campo-form">
+            <label for="data-nutricao">
+              Data desejada
+            </label>
+
+            <input
+              type="date"
+              id="data-nutricao"
+              name="data"
+              required
+            >
+
+            <small>
+              Disponível somente às segundas, quartas e sextas.
+            </small>
+          </div>
+
+          <div class="campo-form">
+            <label for="horario-nutricao">
+              Horário disponível
+            </label>
+
+            <select
+              id="horario-nutricao"
+              name="horario"
+              required
+              disabled
+            >
+              <option value="">
+                Primeiro escolha uma data
+              </option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-whatsapp btn-full"
+          >
+            Solicitar agendamento
+          </button>
+
+          <div
+            class="mensagem-agendamento"
+            id="mensagem-nutricao"
+            aria-live="polite"
+          ></div>
+
+        </form>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
